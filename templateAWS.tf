@@ -8,7 +8,7 @@ provider "aws" {
    instance_type = "t2.micro"
 
    tags {
-     Name = "${var.vm_name}"
+     Name = "testregress"
    }
  }
 
