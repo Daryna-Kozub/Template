@@ -8,6 +8,6 @@ provider "aws" {
    instance_type = "t2.micro"
 
    tags {
-     Name = "testregress"
+     Name = "testtemplate"
    }
     }
