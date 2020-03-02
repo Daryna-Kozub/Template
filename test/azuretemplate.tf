@@ -2,26 +2,6 @@
 provider "azurerm" { }
 
 # Create a resource group if it doesn’t exist
-resource "azurerm_resource_group" "myterraformgroup12autotests" {
-name     = "${var.resourcename}"
-location = "North Europe"
-
-tags {
-environment = "${var.default_environment_tag}"
-}
-}
-
-# Generate random text for a unique storage account name
-resource "random_id" "randomId" {
-keepers = {
-# Generate a new ID only when a new resource group is defined
-resource_group = "${azurerm_resource_group.myterraformgroup12autotests.name}"
-}
-
-# Configure the Microsoft Azure Provider
-provider "azurerm" { }
-
-# Create a resource group if it doesn’t exist
 resource "azurerm_resource_group" "myterraformgroup12" {
     name     = "${var.resourcename}"
     location = "East US"
