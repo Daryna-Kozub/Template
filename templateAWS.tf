@@ -9,6 +9,6 @@ resource "aws_instance" "test_VM" {
   availability_zone = "eu-west-2a"
 
   tags {
-    Name = "smoketerrafortest"
+    Name = "smoketerrafort"
   }
 }
